@@ -1,23 +1,179 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Web</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Portal Partners Iberia & Latam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #005555;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+        }
+        .progress-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .progress-bar div {
+            width: 100%;
+            height: 20px;
+            background-color: #ccc;
+            position: relative;
+        }
+        .progress-bar div span {
+            display: block;
+            height: 100%;
+            width: 50%; /* Change based on percentage */
+            background-color: #008000;
+        }
+        .sales-section {
+            margin-top: 20px;
+        }
+        .sales-section h2 {
+            margin-top: 0;
+        }
+        .filters, .buttons {
+            margin: 15px 0;
+        }
+        .newsletter, .products, .documentation, .tools, .support {
+            margin-top: 30px;
+        }
+        .newsletter img, .products img {
+            width: 100%;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        .grid div {
+            background-color: #FFD700;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #005555;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="about.html">Sobre Nosotros</a>
-            <a href="contact.html">Contacto</a>
-        </nav>
-    </header>
-    <main>
-        <!-- Contenido de la vista -->
-    </main>
-    <script src="scripts/main.js"></script>
+
+<header>
+    <h1>Portal Partners Iberia & Latam</h1>
+    <nav>
+        <a href="#">Ventas</a>
+        <a href="#">Documentos</a>
+        <a href="#">Herramientas</a>
+        <a href="#">Soporte</a>
+    </nav>
+</header>
+
+<div class="container">
+    <section class="progress">
+        <h2>Tipo de partner</h2>
+        <div class="progress-bar">
+            <div>
+                <span></span>
+            </div>
+            <p>100%</p>
+        </div>
+    </section>
+
+    <section class="sales-section">
+        <h2>Ventas</h2>
+        <div class="filters">
+            <label>Fecha:</label>
+            <input type="date">
+            <label>Producto:</label>
+            <input type="text">
+        </div>
+        <div class="buttons">
+            <button>Nuevo Lead</button>
+            <button>Nueva Oportunidad</button>
+            <button>Mis Cuentas</button>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Newsletter</h2>
+        <p>Facturación electrónica - Obligaciones y herramientas</p>
+        <img src="newsletter-placeholder.jpg" alt="Newsletter">
+    </section>
+
+    <section class="products">
+        <h2>Productos</h2>
+        <img src="products-placeholder.jpg" alt="Productos">
+    </section>
+
+    <section class="documentation">
+        <h2>Documentación</h2>
+        <div class="grid">
+            <div>e-Learning</div>
+            <div>Certificaciones</div>
+            <div>Brochures</div>
+            <div>Whitepapers</div>
+            <div>Casos de uso</div>
+            <div>Videos</div>
+        </div>
+    </section>
+
+    <section class="tools">
+        <h2>Herramientas</h2>
+        <div class="grid">
+            <div>Gestor de Servicios</div>
+            <div>Software y Firmware</div>
+            <div>Sample</div>
+        </div>
+    </section>
+
+    <section class="support">
+        <h2>Soporte</h2>
+        <form>
+            <label>Nombre:</label><br>
+            <input type="text"><br>
+            <label>Email:</label><br>
+            <input type="email"><br>
+            <label>Teléfono:</label><br>
+            <input type="tel"><br>
+            <label>Descripción:</label><br>
+            <textarea></textarea><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>Namirial - Calle lorem ipsum, 21, Madrid, España</p>
+</footer>
+
 </body>
 </html>
