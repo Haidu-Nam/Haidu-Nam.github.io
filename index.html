@@ -37,10 +37,8 @@
                         <li><a class="dropdown-item" href="cuentas.html">Cuentas</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="documentos.html" id="navbarDropdownDocumentos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Documentos
-                    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="documentos.html">Documentos</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHerramientas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -61,35 +59,66 @@
 </nav>
 
 <div class="container">
-    <section class="progress-bar-container">
+    <!-- Progreso del partner -->
+    <section class="progress-bar-container my-4">
         <h2>Tipo de partner</h2>
         <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
         </div>
     </section>
 
-    <section class="sales-section">
-        <div class="image-placeholder">Imagen</div>
-        <div class="filters">
-            <h2>Ventas</h2>
-            <div class="mb-3">
-                <label for="date" class="form-label">Fecha:</label>
-                <input type="date" id="date" class="form-control">
+    <!-- Ventas -->
+    <section class="sales-section my-4">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="image-placeholder">Imagen</div>
             </div>
-            <div class="mb-3">
-                <label for="product" class="form-label">Producto:</label>
-                <input type="text" id="product" class="form-control">
-            </div>
-            <div>
-                <button class="btn btn-primary">Nuevo Lead</button>
-                <button class="btn btn-secondary">Nueva Oportunidad</button>
-                <button class="btn btn-success">Mis Cuentas</button>
+            <div class="col-md-8">
+                <h2>Ventas</h2>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Fecha:</label>
+                    <input type="date" id="date" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="product" class="form-label">Producto:</label>
+                    <input type="text" id="product" class="form-control">
+                </div>
+                <div>
+                    <button class="btn btn-primary">Nuevo Lead</button>
+                    <button class="btn btn-secondary">Nueva Oportunidad</button>
+                    <button class="btn btn-success">Mis Cuentas</button>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter my-4">
+        <h2>Newsletter</h2>
+        <p>Facturación electrónica - Obligaciones y herramientas</p>
+        <img src="/assets/images/newsletter-placeholder.jpg" alt="Newsletter" class="img-fluid">
+    </section>
+
+    <!-- Productos -->
+    <section class="products my-4">
+        <h2>Productos</h2>
+        <img src="/assets/images/products-placeholder.jpg" alt="Productos" class="img-fluid">
+    </section>
+
+    <!-- Documentación -->
+    <section class="documentation my-4">
+        <h2>Documentación</h2>
+        <img src="/assets/images/documentation-placeholder.jpg" alt="Documentación" class="img-fluid">
+    </section>
+
+    <!-- Herramientas -->
+    <section class="tools my-4">
+        <h2>Herramientas</h2>
+        <img src="/assets/images/tools-placeholder.jpg" alt="Herramientas" class="img-fluid">
+    </section>
 </div>
 
-<footer>
+<footer class="bg-dark text-white text-center py-3">
     <p>Namirial - Calle lorem ipsum, 21, Madrid, España</p>
 </footer>
 
