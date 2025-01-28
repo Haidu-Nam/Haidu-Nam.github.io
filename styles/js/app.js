@@ -3,7 +3,7 @@ function loadContent(url) {
     fetch(url) // Solicita el archivo HTML
         .then(response => {
             if (!response.ok) {
-                throw new Error(Error HTTP! status: ${response.status});
+                throw new Error('Error HTTP! status: ${response.status}');
             }
             return response.text(); // Devuelve el contenido como texto
         })
