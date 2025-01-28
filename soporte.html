@@ -1,3 +1,69 @@
 <div class="container">
-    Soporte
+    <style>
+        .form-section {
+            margin-top: 20px;
+        }
+        .form-section h2 {
+            color: #008080;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .descripcion-textarea {
+            resize: none;
+        }
+    </style>
+    <!-- Formulario -->
+    <div class="container form-section">
+        <h2>Formulario Petición de Soporte</h2>
+        <form>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                </div>
+                <div class="col-md-4">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+                </div>
+                <div class="col-md-4">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="oportunidad" class="form-label">Oportunidad/Lead</label>
+                <select class="form-select" id="oportunidad">
+                    <option value="" selected>Seleccione una opción</option>
+                    <option value="preventa">Pre-venta</option>
+                    <option value="postventa">Post-venta</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Tipo de Soporte</label>
+                <div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tipoSoporte" id="preventa" value="preventa">
+                        <label class="form-check-label" for="preventa">Pre-venta</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tipoSoporte" id="postventa" value="postventa">
+                        <label class="form-check-label" for="postventa">Post-venta</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tipoSoporte" id="otro" value="otro">
+                        <label class="form-check-label" for="otro">Otro</label>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <textarea class="form-control descripcion-textarea" id="descripcion" rows="5" placeholder="Ingrese una descripción"></textarea>
+            </div>
+            <!-- Botón Generar Petición -->
+            <div class="mt-4 text-center">
+                <button type="submit" class="btn btn-primary">Generar petición</button>
+            </div>
+        </form>
+    </div>
 </div>

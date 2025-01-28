@@ -1,3 +1,86 @@
 <div class="container">
-   SAMPLES
+   <style>
+      
+      .form-section {
+          margin-top: 20px;
+      }
+      .form-section h2 {
+          color: #008080;
+          text-align: center;
+          margin-bottom: 30px;
+      }
+      .add-row-btn {
+          background-color: #008080;
+          color: white;
+          border-radius: 50%;
+          font-size: 20px;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          cursor: pointer;
+      }
+      .add-row-btn:hover {
+          background-color: #005757;
+      }
+  </style>
+    <!-- Formulario -->
+    <div class="container form-section">
+      <h2>Formulario Petición de Muestras</h2>
+      <form>
+          <div class="row mb-3">
+              <div class="col-md-4">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+              </div>
+              <div class="col-md-4">
+                  <label for="apellido" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+              </div>
+              <div class="col-md-4">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
+              </div>
+          </div>
+          <div class="mb-3">
+              <label for="oportunidad" class="form-label">Oportunidad/Lead</label>
+              <select class="form-select" id="oportunidad">
+                  <option value="" selected>Seleccione una opción</option>
+                  <option value="lead1">Lead 1</option>
+                  <option value="lead2">Lead 2</option>
+              </select>
+          </div>
+
+          <!-- Tabla -->
+          <h5>Detalles del Producto</h5>
+          <table class="table table-bordered">
+              <thead>
+                  <tr>
+                      <th>Producto</th>
+                      <th>Unidades</th>
+                      <th>Fecha Inicio</th>
+                      <th>Fecha Fin</th>
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><input type="text" class="form-control" placeholder="Producto"></td>
+                      <td><input type="number" class="form-control" placeholder="Unidades"></td>
+                      <td><input type="date" class="form-control"></td>
+                      <td><input type="date" class="form-control"></td>
+                      <td><button type="button" class="btn btn-danger btn-sm">X</button></td>
+                  </tr>
+              </tbody>
+          </table>
+          <button type="button" class="add-row-btn">+</button>
+
+          <!-- Botón Generar PDF -->
+          <div class="mt-4 text-center">
+              <button type="submit" class="btn btn-primary">Generar PDF y Firmar</button>
+          </div>
+      </form>
+  </div>   
 </div>
