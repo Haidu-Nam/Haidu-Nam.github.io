@@ -1,32 +1,35 @@
-// Función para cargar contenido dinámico dentro del contenedor
+// Función para cargar contenido dinámico
 function loadContent(url) {
-    fetch(url) // Realiza una solicitud HTTP GET al archivo HTML
+    fetch(url)
         .then(response => {
             if (!response.ok) {
-                throw new Error(Error al cargar el contenido: ${response.statusText});
+                throw new Error(HTTP error! status: ${response.status});
             }
             return response.text();
         })
         .then(html => {
-            // Inserta el contenido HTML en el contenedor dinámico
-            document.getElementById('dynamic-content').innerHTML = html;
+            document.getElementById('dynamic-content').innerHTML = html; // Inserta el contenido dinámico
         })
         .catch(err => {
-            console.error('Error:', err);
-            document.getElementById('dynamic-content').innerHTML = <p>Error al cargar el contenido.</p>;
+            console.error('Error al cargar el contenido:', err);
+            document.getElementById('dynamic-content').innerHTML = `
+                <div class="alert alert-danger" role="alert">
+                    Error al cargar el contenido.
+                </div>`;
         });
 }
 
-// Añadir eventos a los enlaces con la clase 'dynamic-link'
+// Añadir eventos a los enlaces dinámicos
 document.addEventListener('DOMContentLoaded', () => {
+    // Carga inicial del contenido (Home por defecto)
+    loadContent('home.html');
+
+    // Configurar eventos para los enlaces dinámicos
     document.querySelectorAll('.dynamic-link').forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault(); // Evita la recarga de la página
-            const url = this.getAttribute('href'); // Obtiene la URL del enlace
+            const url = this.getAttribute('href'); // Obtén la URL del enlace
             loadContent(url); // Llama a la función para cargar el contenido
         });
     });
-
-    // Carga inicial del contenido (por ejemplo, la página de inicio)
-    loadContent('home.html');
 });
