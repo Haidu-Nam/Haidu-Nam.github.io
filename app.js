@@ -1,17 +1,18 @@
 // Función para cargar contenido dinámico
 function loadContent(url) {
-    fetch(url)
+    fetch(url) // Solicita el archivo HTML
         .then(response => {
             if (!response.ok) {
-                throw new Error(HTTP error! status: ${response.status});
+                throw new Error(Error HTTP! status: ${response.status});
             }
-            return response.text();
+            return response.text(); // Devuelve el contenido como texto
         })
         .then(html => {
-            document.getElementById('dynamic-content').innerHTML = html; // Inserta el contenido dinámico
+            const dynamicContent = document.getElementById('dynamic-content');
+            dynamicContent.innerHTML = html; // Inserta el contenido en el contenedor
         })
-        .catch(err => {
-            console.error('Error al cargar el contenido:', err);
+        .catch(error => {
+            console.error('Error al cargar contenido:', error);
             document.getElementById('dynamic-content').innerHTML = `
                 <div class="alert alert-danger" role="alert">
                     Error al cargar el contenido.
@@ -19,17 +20,17 @@ function loadContent(url) {
         });
 }
 
-// Añadir eventos a los enlaces dinámicos
+// Configurar enlaces dinámicos
 document.addEventListener('DOMContentLoaded', () => {
-    // Carga inicial del contenido (Home por defecto)
+    // Cargar el contenido inicial (home.html)
     loadContent('home.html');
 
-    // Configurar eventos para los enlaces dinámicos
+    // Manejar clics en enlaces con la clase 'dynamic-link'
     document.querySelectorAll('.dynamic-link').forEach(link => {
-        link.addEventListener('click', function (event) {
+        link.addEventListener('click', event => {
             event.preventDefault(); // Evita la recarga de la página
-            const url = this.getAttribute('href'); // Obtén la URL del enlace
-            loadContent(url); // Llama a la función para cargar el contenido
+            const url = link.getAttribute('href'); // Obtén la URL del enlace
+            loadContent(url); // Carga el contenido dinámico
         });
     });
-});
+})
