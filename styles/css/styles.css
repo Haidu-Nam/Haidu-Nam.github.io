@@ -83,3 +83,6 @@ th {
     background-color: #008080;
     color: white;
 }
+.dropdown-item:hover {
+    background-color: #02787C !important;
+}
