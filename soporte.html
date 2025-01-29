@@ -1,36 +1,23 @@
-<div class="container">
-    <style>
-        .form-section {
-            margin-top: 20px;
-        }
-        .form-section h2 {
-            color: #008080;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .descripcion-textarea {
-            resize: none;
-        }
-    </style>
+<div>
     <!-- Formulario -->
     <div class="container form-section">
         <h2>Formulario Petición de Soporte</h2>
         <form>
             <div class="row mb-3">
-                <div class="col-md-4">
+                <div>
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
                 </div>
-                <div class="col-md-4">
+                <div>
                     <label for="apellido" class="form-label">Apellido</label>
                     <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
                 </div>
-                <div class="col-md-4">
+                <div>
                     <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
                 </div>
             </div>
-            <div class="mb-3">
+            <div class="col-md-3 mb-3">
                 <label for="oportunidad" class="form-label">Oportunidad/Lead</label>
                 <select class="form-select" id="oportunidad">
                     <option value="" selected>Seleccione una opción</option>
@@ -56,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mb-3">
+            <div class="col-md-3 mb-3">
                 <label for="descripcion" class="form-label">Descripción</label>
                 <textarea class="form-control descripcion-textarea" id="descripcion" rows="5" placeholder="Ingrese una descripción"></textarea>
             </div>

@@ -1,50 +1,23 @@
-<div class="container">
-   <style>
-      
-      .form-section {
-          margin-top: 20px;
-      }
-      .form-section h2 {
-          color: #008080;
-          text-align: center;
-          margin-bottom: 30px;
-      }
-      .add-row-btn {
-          background-color: #008080;
-          color: white;
-          border-radius: 50%;
-          font-size: 20px;
-          width: 40px;
-          height: 40px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border: none;
-          cursor: pointer;
-      }
-      .add-row-btn:hover {
-          background-color: #005757;
-      }
-  </style>
+<div>
     <!-- Formulario -->
     <div class="container form-section">
       <h2>Formulario Petición de Muestras</h2>
       <form>
           <div class="row mb-3">
-              <div class="col-md-4">
+              <div class="mb-3">
                   <label for="nombre" class="form-label">Nombre</label>
                   <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
               </div>
-              <div class="col-md-4">
+              <div class="mb-3">
                   <label for="apellido" class="form-label">Apellido</label>
                   <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
               </div>
-              <div class="col-md-4">
+              <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
                   <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
               </div>
           </div>
-          <div class="mb-3">
+          <div class="col-md-3 mb-3">
               <label for="oportunidad" class="form-label">Oportunidad/Lead</label>
               <select class="form-select" id="oportunidad">
                   <option value="" selected>Seleccione una opción</option>
@@ -54,7 +27,14 @@
           </div>
 
           <!-- Tabla -->
-          <h5>Detalles del Producto</h5>
+           <div class="row">
+              <div class="col-md">
+                 <h5>Detalles del Producto</h5>
+              </div>
+              <div class="col-md">
+                 <button type="button"><img src="/assets/images/boton-mas.png" alt="Boton para añadir sample" height="80" width="80"></button>
+              </div>
+           </div>
           <table class="table table-bordered">
               <thead>
                   <tr>
@@ -71,11 +51,10 @@
                       <td><input type="number" class="form-control" placeholder="Unidades"></td>
                       <td><input type="date" class="form-control"></td>
                       <td><input type="date" class="form-control"></td>
-                      <td><button type="button" class="btn btn-danger btn-sm">X</button></td>
+                      <td><button type="button"><img src="/assets/images/boton-menos.png" alt="Botón para quitar sample" height="80" width="80"></button></td>
                   </tr>
               </tbody>
           </table>
-          <button type="button" class="add-row-btn">+</button>
 
           <!-- Botón Generar PDF -->
           <div class="mt-4 text-center">

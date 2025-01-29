@@ -86,3 +86,53 @@ th {
 .dropdown-item:hover {
     background-color: #02787C !important;
 }
+
+.form-section {
+    margin-top: 20px;
+}
+.form-section h2 {
+    color: #008080;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.add-row-btn {
+    background-color: #008080;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+.add-row-btn:hover {
+    background-color: #005757;
+}
+
+.descripcion-textarea {
+    resize: none;
+}
+.card img {
+    max-height: 150px;
+    object-fit: cover;
+}
+.section-title {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #008080;
+}
+
+.sidebar {
+    background-color: #02787C;
+    border-right: 1px solid #ddd;
+    padding: 15px;
+}
+.videos iframe {
+    width: 100%;
+    height: 200px;
+}
