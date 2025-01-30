@@ -20,6 +20,7 @@ header {
 
 .navbar-dark .navbar-nav .nav-link {
     color: white;
+    background-color: #02787C;
 }
 
 .navbar-dark .navbar-nav .dropdown-menu {
@@ -142,5 +143,5 @@ th {
 }
 
 .filtros-ventas{
-    background-color: rgb(56, 56, 56);
+    background-color: rgba(56, 56, 56, 0.404);
 }
