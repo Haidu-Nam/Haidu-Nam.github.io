@@ -144,3 +144,7 @@ th {
 .filtros-ventas{
     background-color: rgba(56, 56, 56, 0.404);
 }
+
+title{
+    font-size: 3em;
+}
