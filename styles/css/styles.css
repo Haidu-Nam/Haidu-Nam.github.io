@@ -116,6 +116,7 @@ th {
 }
 .card img {
     max-height: 85px;
+    max-width: 85px;
 }
 .section-title {
     text-align: center;
@@ -146,4 +147,7 @@ th {
 
 title{
     font-size: 3em !important;
+}
+.list{ 
+    list-style-type: circle; 
 }
