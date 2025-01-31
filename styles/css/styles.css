@@ -115,8 +115,7 @@ th {
     resize: none;
 }
 .card img {
-    max-height: 150px;
-    object-fit: cover;
+    max-height: 85px;
 }
 .section-title {
     text-align: center;
