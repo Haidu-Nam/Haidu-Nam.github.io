@@ -14,7 +14,7 @@ header {
 
 .header-title h1 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 3em;
     line-height: 1.2;
 }
 
@@ -143,11 +143,4 @@ th {
 
 .filtros-ventas{
     background-color: rgba(56, 56, 56, 0.404);
-}
-
-title{
-    font-size: 3em !important;
-}
-.list{ 
-    list-style-type: circle; 
 }
